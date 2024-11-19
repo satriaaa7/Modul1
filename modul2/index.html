@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalkulator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0e0e0;
+            margin: 0;
+        }
+        .calculator {
+            width: 260px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .calculator .display {
+            background-color: #1c1c3c;
+            color: white;
+            text-align: right;
+            padding: 20px;
+            font-size: 40px;
+            box-sizing: border-box;
+        }
+        .calculator .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .calculator .buttons button {
+            background-color: #3c3c5c;
+            border: 1px solid #2c2c4c;
+            color: white;
+            font-size: 20px;
+            padding: 20px;
+            cursor: pointer;
+            outline: none;
+        }
+        .calculator .buttons button.operator {
+            background-color: #7c5cfc;
+        }
+        .calculator .buttons button:active {
+            background-color: #5c5c7c;
+        }
+        .calculator .buttons button.operator:active {
+            background-color: #5c3cfc;
+        }
+        .calculator .buttons button.zero {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">0</div>
+        <div class="buttons">
+            <button>AC</button>
+            <button>±</button>
+            <button>%</button>
+            <button class="operator">÷</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="operator">×</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="operator">−</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="operator">+</button>
+            <button class="zero">0</button>
+            <button>.</button>
+            <button class="operator">^</button>
+            <button class="operator">mod</button>
+            <button class="operator">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
